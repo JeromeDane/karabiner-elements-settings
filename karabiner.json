@@ -19,6 +19,16 @@
                         "description": "Razer Naga Hex 2 custom buttons",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 5426
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "1"
                                 },
@@ -28,19 +38,19 @@
                                         "modifiers": "command"
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 5426
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
                                     "key_code": "4"
                                 },
@@ -50,19 +60,19 @@
                                         "modifiers": "command"
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 5426
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
                                     "key_code": "2"
                                 },
@@ -72,19 +82,19 @@
                                         "modifiers": "control"
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 5426
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
                                     "key_code": "3"
                                 },
@@ -94,19 +104,19 @@
                                         "modifiers": "control"
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 5426
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
                                     "key_code": "5"
                                 },
@@ -115,41 +125,44 @@
                                         "apple_vendor_keyboard_key_code": "mission_control"
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 5426
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
                                     "key_code": "6"
                                 },
                                 "to": [
                                     {
                                         "key_code": "t",
-                                        "modifiers": ["command", "shift"]
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "device_if",
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 5426
-                                            }
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
                                         ]
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 5426
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "7"
                                 },
@@ -157,16 +170,6 @@
                                     {
                                         "key_code": "w",
                                         "modifiers": "command"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                        "type": "device_if",
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 5426
-                                            }
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -177,6 +180,13 @@
                         "description": "Fix forward/back for swapped command and option keys",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "name": "alt_tab mode",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_arrow",
                                     "modifiers": {
@@ -191,16 +201,16 @@
                                         "modifiers": "command"
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_unless",
-                                        "name": "alt_tab mode",
-                                        "value": 1
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "name": "alt_tab mode",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "right_arrow",
                                     "modifiers": {
@@ -215,19 +225,12 @@
                                         "modifiers": "command"
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "variable_unless",
-                                        "name": "alt_tab mode",
-                                        "value": 1
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "tab",
-                                    "modifiers": {          
+                                    "modifiers": {
                                         "mandatory": [
                                             "left_option"
                                         ]
@@ -251,7 +254,9 @@
                                 "from": {
                                     "key_code": "left_option",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -634,6 +639,32 @@
                                             "left_command",
                                             "left_control",
                                             "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Open Emoji with CMD + Shift + space.",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
                                         ]
                                     }
                                 ],
